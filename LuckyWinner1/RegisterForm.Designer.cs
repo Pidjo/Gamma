@@ -38,6 +38,8 @@
             this.buttonRegister = new System.Windows.Forms.Button();
             this.loginField = new System.Windows.Forms.TextBox();
             this.passField = new System.Windows.Forms.TextBox();
+            this.buttonstart = new System.Windows.Forms.Button();
+            this.buttonstop = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -82,6 +84,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel1.Controls.Add(this.buttonstop);
+            this.panel1.Controls.Add(this.buttonstart);
             this.panel1.Controls.Add(this.RegisterLabel);
             this.panel1.Controls.Add(this.userNameField);
             this.panel1.Controls.Add(this.userSurnameField);
@@ -168,6 +172,28 @@
             this.passField.Enter += new System.EventHandler(this.passField_Enter);
             this.passField.Leave += new System.EventHandler(this.passField_Leave);
             // 
+            // buttonstart
+            // 
+            this.buttonstart.BackColor = System.Drawing.SystemColors.Desktop;
+            this.buttonstart.Location = new System.Drawing.Point(32, 398);
+            this.buttonstart.Name = "buttonstart";
+            this.buttonstart.Size = new System.Drawing.Size(75, 23);
+            this.buttonstart.TabIndex = 8;
+            this.buttonstart.Text = "старт";
+            this.buttonstart.UseVisualStyleBackColor = false;
+            this.buttonstart.Click += new System.EventHandler(this.buttonstart_Click);
+            // 
+            // buttonstop
+            // 
+            this.buttonstop.BackColor = System.Drawing.SystemColors.Desktop;
+            this.buttonstop.Location = new System.Drawing.Point(133, 398);
+            this.buttonstop.Name = "buttonstop";
+            this.buttonstop.Size = new System.Drawing.Size(75, 23);
+            this.buttonstop.TabIndex = 9;
+            this.buttonstop.Text = "стоп";
+            this.buttonstop.UseVisualStyleBackColor = false;
+            this.buttonstop.Click += new System.EventHandler(this.buttonstop_Click);
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -197,5 +223,7 @@
         private System.Windows.Forms.TextBox userNameField;
         private System.Windows.Forms.TextBox userSurnameField;
         private System.Windows.Forms.Label RegisterLabel;
+        private System.Windows.Forms.Button buttonstop;
+        private System.Windows.Forms.Button buttonstart;
     }
 }

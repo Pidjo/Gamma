@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LuckyWinner1;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -77,6 +78,33 @@ namespace Gamma
         private void buttonPokupka_Click(object sender, EventArgs e)
         {
             OpenFormTicket(new FormTicket(), sender);
+        }
+        private void OpenFormOtchet(Form FormOtchet, object btnSender)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+
+            activeForm = FormOtchet;
+            FormOtchet.TopLevel = false;
+            FormOtchet.FormBorderStyle = FormBorderStyle.None;
+            FormOtchet.Dock = DockStyle.Fill;
+            this.panelSeans.Controls.Add(FormOtchet);
+            this.panelSeans.Tag = FormOtchet;
+            FormOtchet.BringToFront();
+            FormOtchet.Show();
+            labelTItle.Text = FormOtchet.Text;
+
+
+        }
+
+        private void buttonOtchet_Click(object sender, EventArgs e)
+        {
+            // this.Hide();
+          //  FormOtchet o = new FormOtchet();
+           //  o.Show();
+            OpenFormOtchet(new FormOtchet(), sender);
         }
     }
 }

@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -207,6 +208,40 @@ namespace Gamma
             this.Hide();
             LoginForm1 loginForm1 = new LoginForm1();
             loginForm1.Show();
+        }
+        ClassUsers u = new ClassUsers();
+        private bool flag;
+        string[] Login = { "asd", "zxc", "tyu", "ghj", "jkl", "uio" };
+        string[] Password = { "123" };
+        string[] Imya = { "asd", "zxc", "tyu", "ghj", "jkl", "uio" };
+        string[] Surname = { "asd", "zxc", "tyu", "ghj", "jkl", "uio" };
+
+        Random rng = new Random();
+        int count = 0;
+
+        public void NewUsers()
+        {
+            while (flag)
+            {
+                string login = Login[rng.Next(0, Login.Length)];
+                string password = Password[rng.Next(0, Password.Length)];
+                string imya = Imya[rng.Next(0, Imya.Length)];
+                string surname = Surname[rng.Next(0, Surname.Length)];
+                u.Add_to_Users(login, password, imya, surname);
+                count++;
+                label1.Invoke(new Action(() => label1.Text = count.ToString()));
+                Thread.Sleep(1000);
+            }
+        }
+        private void buttonstart_Click(object sender, EventArgs e)
+        {
+            flag = true;
+            Task.Run(() => NewUsers());
+        }
+
+        private void buttonstop_Click(object sender, EventArgs e)
+        {
+            flag = false;
         }
     }
 } 

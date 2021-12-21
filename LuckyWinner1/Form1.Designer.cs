@@ -30,8 +30,6 @@ namespace Gamma
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.buttonStart = new System.Windows.Forms.Button();
-            this.buttonStop = new System.Windows.Forms.Button();
             this.dataGridViewT = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewT)).BeginInit();
             this.SuspendLayout();
@@ -45,31 +43,6 @@ namespace Gamma
             this.label1.Size = new System.Drawing.Size(72, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
-            // 
-            // buttonStart
-            // 
-            this.buttonStart.BackColor = System.Drawing.SystemColors.Desktop;
-            this.buttonStart.Font = new System.Drawing.Font("MineCrafter 3", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonStart.Location = new System.Drawing.Point(583, 341);
-            this.buttonStart.Name = "buttonStart";
-            this.buttonStart.Size = new System.Drawing.Size(75, 23);
-            this.buttonStart.TabIndex = 1;
-            this.buttonStart.Text = "Старт";
-            this.buttonStart.UseVisualStyleBackColor = false;
-            this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
-            // 
-            // buttonStop
-            // 
-            this.buttonStop.BackColor = System.Drawing.SystemColors.Desktop;
-            this.buttonStop.Font = new System.Drawing.Font("MineCrafter 3", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonStop.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonStop.Location = new System.Drawing.Point(697, 341);
-            this.buttonStop.Name = "buttonStop";
-            this.buttonStop.Size = new System.Drawing.Size(75, 23);
-            this.buttonStop.TabIndex = 2;
-            this.buttonStop.Text = "Стоп";
-            this.buttonStop.UseVisualStyleBackColor = false;
-            this.buttonStop.Click += new System.EventHandler(this.buttonStop_Click);
             // 
             // dataGridViewT
             // 
@@ -86,8 +59,6 @@ namespace Gamma
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(784, 365);
             this.Controls.Add(this.dataGridViewT);
-            this.Controls.Add(this.buttonStop);
-            this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.label1);
             this.Name = "FormTicket";
             this.Text = "FormTicket";
@@ -101,8 +72,6 @@ namespace Gamma
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button buttonStart;
-        private System.Windows.Forms.Button buttonStop;
         private System.Windows.Forms.DataGridView dataGridViewT;
     }
 }

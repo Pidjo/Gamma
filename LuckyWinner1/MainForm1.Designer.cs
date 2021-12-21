@@ -109,6 +109,7 @@
             this.buttonOtchet.TabIndex = 5;
             this.buttonOtchet.Text = "Отчет";
             this.buttonOtchet.UseVisualStyleBackColor = false;
+            this.buttonOtchet.Click += new System.EventHandler(this.buttonOtchet_Click);
             // 
             // buttonPokupka
             // 

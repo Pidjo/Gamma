@@ -1,30 +1,26 @@
-﻿using System;
+﻿using Gamma;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
-namespace Gamma
+namespace LuckyWinner1
 {
-    public partial class FormTicket : Form
+    public partial class FormOtchet : Form
     {
-        public FormTicket()
+        public FormOtchet()
         {
             InitializeComponent();
         }
-        ClassTicket t = new ClassTicket();
-
-        private void FormTicket_Load(object sender, EventArgs e)
+        ClassOtchet o = new ClassOtchet();
+        private void FormOtchet_Load(object sender, EventArgs e)
         {
-            dataGridViewT.DataSource = t.Ticket();
+            dataGridViewO.DataSource = o.Otchet();
         }
-
-
     }
 }

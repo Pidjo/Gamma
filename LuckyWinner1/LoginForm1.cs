@@ -66,7 +66,7 @@ namespace Gamma
                 mainForm1.Show();
             }
             else 
-                MessageBox.Show("No");
+                MessageBox.Show("Неверный логин или пароль");
             }
 
         private void RegisterLabel_Click(object sender, EventArgs e)
@@ -76,9 +76,5 @@ namespace Gamma
             registerForm.Show();
         }
 
-        private void passField_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

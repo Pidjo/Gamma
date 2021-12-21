@@ -20,7 +20,6 @@ namespace Gamma
         ClassSeans s = new ClassSeans();
 
         private bool flag;
-
         string[] Title = { "Месть чебурашки", "Убить Билли Бонса", "Пираты реки Великой", "Пипа", "Биба и Боба", "Волк из Комарово", "Любовь и вороны", "Карпараська" };
         string[] Genre = { "боевик", "драмма", "комедия", "биография", "спорт", "ужасы", "триллер", "детектив" };
         string[] Data = { "ПН", "ВТ", "СР", "ЧТ", "ПТ", "СБ", "ВС" };
@@ -61,7 +60,10 @@ namespace Gamma
         {
             dataSeans.DataSource = s.Seans();
         }
-     
 
+        private void buttonUP_Click(object sender, EventArgs e)
+        {
+            dataSeans.DataSource = s.Seans();
+        }
     }
 }

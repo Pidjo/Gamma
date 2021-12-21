@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 
 namespace Gamma
 {
-    class ClassSeans
+    class ClassUsers
     {
         MySqlConnection connection = new MySqlConnection("server=localhost;port=3307;username=root;password=root;database=kinoteatr");
-        public ArrayList Seans()
+        public ArrayList Users()
         {
             ArrayList list = new ArrayList();
-            MySqlCommand cmd = new MySqlCommand($"SELECT * FROM seans", connection);
+            MySqlCommand cmd = new MySqlCommand($"SELECT * FROM users", connection);
             connection.Open();
             MySqlDataReader dr = cmd.ExecuteReader();
             if (dr.HasRows)
@@ -29,16 +29,15 @@ namespace Gamma
             return list;
         }
 
-        public bool Add_to_Seans(string Title, string Genre, string Data, string Hall, string Time)
+        public bool Add_to_Users(string Login, string Password, string Imya, string Surname)
         {
 
             bool flag = false;
-            MySqlCommand command = new MySqlCommand($"INSERT INTO seans(title, genre, data, hall, time ) VALUES (@title, @genre, @data, @hall, @time)", connection);
-            command.Parameters.AddWithValue("@title", Title);
-            command.Parameters.AddWithValue("@genre", Genre);
-            command.Parameters.AddWithValue("@data", Data);
-            command.Parameters.AddWithValue("@hall", Hall);
-            command.Parameters.AddWithValue("@time", Time);
+            MySqlCommand command = new MySqlCommand($"INSERT INTO users(login, password, imya, surname ) VALUES (@login, @password, @imya, @surname)", connection);
+            command.Parameters.AddWithValue("@login", Login);
+            command.Parameters.AddWithValue("@password", Password);
+            command.Parameters.AddWithValue("@imya", Imya);
+            command.Parameters.AddWithValue("@surname", Surname);
             connection.Open();
             if (command.ExecuteNonQuery() == 1)
             {

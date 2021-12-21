@@ -33,6 +33,7 @@ namespace Gamma
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.dataSeans = new System.Windows.Forms.DataGridView();
+            this.buttonUP = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataSeans)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,12 +82,24 @@ namespace Gamma
             this.dataSeans.Size = new System.Drawing.Size(672, 308);
             this.dataSeans.TabIndex = 3;
             // 
+            // buttonUP
+            // 
+            this.buttonUP.BackColor = System.Drawing.SystemColors.Desktop;
+            this.buttonUP.Location = new System.Drawing.Point(496, 341);
+            this.buttonUP.Name = "buttonUP";
+            this.buttonUP.Size = new System.Drawing.Size(75, 23);
+            this.buttonUP.TabIndex = 4;
+            this.buttonUP.Text = "Обновить";
+            this.buttonUP.UseVisualStyleBackColor = false;
+            this.buttonUP.Click += new System.EventHandler(this.buttonUP_Click);
+            // 
             // FormSeans
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(784, 365);
+            this.Controls.Add(this.buttonUP);
             this.Controls.Add(this.dataSeans);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -107,5 +120,6 @@ namespace Gamma
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dataSeans;
+        private System.Windows.Forms.Button buttonUP;
     }
 }
